@@ -1,0 +1,33 @@
+= JAX-RS Starter
+Lee Braddy
+
+This is a starter project for a JAX-RS application. JAX-RS is a java
+framework for build RESTful applications.
+
+.Technology Stack
+* JAX-RS
+* MOXy
+* Logback
+* Swagger
+
+== Getting Started
+
+.Install these prerequistes
+* Java 1.8
+* git scm
+
+[[clone-build-listing]]
+[source,bash]
+.In your terminal run
+----
+git clone https://github.com/leebraddy/jaxrs-starter.git
+cd jaxrs-starter
+./gradlew build
+./gradlew appRun
+----
+
+== Usage
+
+The application will startup on port *8080*. The swagger generated
+API documentation is browsable at
+http://localhost:8080/jaxrs-starter/api/swagger

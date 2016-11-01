@@ -1,0 +1,33 @@
+plugins {
+    id 'war'
+    id 'org.akhikhl.gretty' version '1.4.0'
+}
+
+gretty {
+    servletContainer = 'jetty9'
+    // Pass through java properties.
+    systemProperty 'log.level', System.getProperty('log.level', 'info')
+}
+
+group 'lee.braddy'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.7'
+    compile group: 'org.glassfish.jersey.containers', name: 'jersey-container-servlet', version: '2.24'
+    compile group: 'org.glassfish.jersey.media', name: 'jersey-media-moxy', version: '2.24'
+    compile group: 'io.swagger', name: 'swagger-jersey2-jaxrs', version: '1.5.10'
+
+    // dependencies for testing
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.1'
+}
