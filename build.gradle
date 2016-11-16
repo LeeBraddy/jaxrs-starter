@@ -5,6 +5,7 @@ plugins {
 
 gretty {
     servletContainer = 'jetty9'
+    managedClassReload = true
     // Pass through java properties.
     systemProperty 'log.level', System.getProperty('log.level', 'info')
 }
